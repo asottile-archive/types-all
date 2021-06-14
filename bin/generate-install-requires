@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+import configparser
+import os
+import subprocess
+import tempfile
+
+
+def main() -> int:
+    with tempfile.TemporaryDirectory() as tmpdir:
+        repo = 'https://github.com/python/typeshed'
+        subprocess.check_call(('git', 'clone', '--depth=1', repo, tmpdir))
+        stubs_dir = os.path.join(tmpdir, 'stubs')
+        install_requires = sorted(f'types-{d}' for d in os.listdir(stubs_dir))
+
+    cfg = configparser.ConfigParser()
+    cfg.read('setup.cfg')
+    cfg['options']['install_requires'] = '\n'.join(install_requires)
+    with open('setup.cfg', 'w') as f:
+        cfg.write(f)
+
+    return subprocess.call(('pre-commit', 'run', '--all-files'))
+
+
+if __name__ == '__main__':
+    exit(main())
