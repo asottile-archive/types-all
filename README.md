@@ -1,4 +1,4 @@
-[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/asottile/types-all/master.svg)](https://results.pre-commit.ci/latest/github/asottile/types-all/master)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/asottile/types-all/main.svg)](https://results.pre-commit.ci/latest/github/asottile/types-all/main)
 
 types-all
 =========
