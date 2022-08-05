@@ -7,7 +7,9 @@ A shim for the typeshed changes in mypy 0.900
 
 ## installation
 
-`pip install types-all`
+```bash
+pip install types-all
+```
 
 ## why
 
