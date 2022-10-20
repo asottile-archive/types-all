@@ -1,3 +1,9 @@
+# DEPRECATED
+
+well, not really deprecated but it represents a point-in-time and won't be changing
+
+___
+
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/asottile/types-all/main.svg)](https://results.pre-commit.ci/latest/github/asottile/types-all/main)
 
 types-all
